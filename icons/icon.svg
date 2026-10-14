@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="20" fill="#1e1e2e"/>
+  <rect x="16" y="16" width="96" height="96" rx="8" fill="none" stroke="#89b4fa" stroke-width="4"/>
+  <text x="64" y="88" text-anchor="middle" fill="#89b4fa" font-size="48" font-weight="bold" font-family="system-ui">T</text>
+  <text x="64" y="112" text-anchor="middle" fill="#89b4fa" font-size="16" font-family="system-ui">译</text>
+</svg>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Translator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 区域选择器全屏覆盖层 -->
+  <div id="selector" class="hidden">
+    <canvas id="selection-canvas"></canvas>
+    <div id="selection-box" class="hidden"></div>
+    <div id="selection-toolbar" class="hidden">
+      <button id="btn-ocr" title="识别并翻译 (Enter)">识别翻译</button>
+      <button id="btn-cancel" title="取消 (Esc)">取消</button>
+    </div>
+    <div id="selection-hint">拖拽框选区域 · Enter 识别 · Esc 取消</div>
+  </div>
+
+  <!-- 翻译结果悬浮提示 -->
+  <div id="tooltip" class="hidden" role="tooltip">
+    <div class="tooltip-header">
+      <span class="tooltip-title">翻译结果</span>
+      <button id="tooltip-close" aria-label="关闭">×</button>
+    </div>
+    <div class="tooltip-content">
+      <div class="text-pair">
+        <label>原文</label>
+        <pre id="tooltip-original"></pre>
+        <button class="copy-btn" data-target="original" title="复制原文">📋</button>
+      </div>
+      <div class="text-pair">
+        <label>译文</label>
+        <pre id="tooltip-translated"></pre>
+        <button class="copy-btn" data-target="translated" title="复制译文">📋</button>
+      </div>
+    </div>
+    <div class="tooltip-actions">
+      <button id="tooltip-retranslate" class="secondary">重新翻译</button>
+      <button id="tooltip-copy-both">复制全部</button>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
