@@ -27,6 +27,12 @@ jobs:
         with:
           toolchain: stable
 
+      - name: Install system dependencies
+        run: |
+          # Install WebView2 Runtime (required for Tauri)
+          choco install microsoft-edge-webview2-runtime -y --no-progress
+        shell: pwsh
+
       - name: Install dependencies
         run: npm ci
 
